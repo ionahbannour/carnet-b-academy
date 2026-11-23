@@ -1,0 +1,5 @@
+const CACHE='carnet-b-academy-v7-2026-11-23';
+const ASSETS=['./','./index.html','./style.css','./v4_style.css','./v5_style.css','./v6_style.css','./v7_style.css','./v7_practice_bank.js','./v7_integrate.js','./v6_questions.js','./v6_cards.js','./v4_scenarios.js','./v5_review_questions.js','./v5_extra_scene_roots.js','./v5_bank.js','./v6_scene_roots.js','./v5_editorial_fixes.js','./sim3d.js','./app.js','./data.js','./expansion.js','./extra_bank_v3.js','./interactive_content.js','./manifest.webmanifest','./icon.svg'];
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;event.respondWith(fetch(event.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(event.request,copy))}return r}).catch(()=>caches.match(event.request)))});

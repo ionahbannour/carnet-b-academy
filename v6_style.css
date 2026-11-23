@@ -1,0 +1,31 @@
+/* v6: Helvetica-first typographic system. No copyrighted font files bundled. */
+:root{--v6-bg:#fafafa;--v6-white:#fff;--v6-ink:#151517;--v6-muted:#66666b;--v6-line:#e9e9eb;--v6-radius:18px;--v6-soft:#f4f4f5}
+html{font-family:"Helvetica Neue",Helvetica,-apple-system,BlinkMacSystemFont,Arial,sans-serif!important;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--v6-bg)!important;color:var(--v6-ink)}
+.sidebar{background:#fff!important;border-right:1px solid var(--v6-line)!important}
+.topbar{background:rgba(255,255,255,.98)!important;border-bottom:1px solid var(--v6-line)!important}
+.content{max-width:1280px!important}
+.hero{border:1px solid #ededee!important;border-radius:24px!important;background:#f1f1f2!important;box-shadow:none!important}
+.hero h1{letter-spacing:-.064em!important;font-weight:600!important}
+.section-heading h2{letter-spacing:-.043em!important;font-weight:590!important}
+.page-intro h1{font-weight:600!important;letter-spacing:-.058em!important}
+.button{border-radius:11px!important;letter-spacing:-.012em!important;font-weight:590!important;transition:background .15s ease,transform .15s ease!important}
+.button.primary{background:#19191a!important;color:#fff!important}
+.button.primary:hover{background:#343436!important}
+.panel,.stat,.task,.lesson-card,.topic-test,.correction,.question-card,.scene-main,.scene-decision{box-shadow:none!important;border-color:var(--v6-line)!important}
+.nav-link.selected{background:#ededee!important;color:#111!important}
+.v6-learning-banner{display:flex;align-items:center;justify-content:space-between;gap:22px;border:1px solid #e9e9eb;background:#fff;border-radius:19px;padding:21px 25px;margin:26px 0 16px}
+.v6-learning-banner>div{min-width:0}.v6-learning-banner strong{display:block;font-weight:610;font-size:17px;letter-spacing:-.035em;margin:5px 0}.v6-learning-banner p{margin:0;color:#69696e;font-size:12px;line-height:1.6}
+.v6-eyebrow{font-size:9px;letter-spacing:.1em;color:#77777d;font-weight:700}
+.v6-cite{display:block;color:#64646b;font-size:11px;line-height:1.6;margin:10px 0 4px;padding:9px 12px;background:#f5f5f5;border-radius:9px;width:fit-content}
+.v6-why{font-size:13px!important;color:#333!important;line-height:1.65!important}
+.v6-flag{appearance:none;border:0;background:transparent;color:#74747a;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:11px;margin:12px 0 0;padding:4px 0;text-align:left;display:block}
+.v6-flag:hover{color:#262628}
+.v6-advanced{background:#f9f9fa!important}
+.v6-traffic-chip{position:absolute;top:14px;left:14px;z-index:3;border-radius:99px;background:rgba(255,255,255,.96);border:1px solid #e5e5e7;color:#202026;font-size:10px;font-weight:600;padding:8px 12px;pointer-events:none;max-width:calc(100% - 160px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v6-traffic-chip.critical{background:#fef4ec;color:#87451c;border-color:#f2e3d4}
+.v6-traffic-chip .dot{width:6px;height:6px;border-radius:99px;background:#454547;display:inline-block;vertical-align:middle;margin-right:7px}
+.v6-traffic-chip.critical .dot{background:#d48a4c}
+.test-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+@media(max-width:760px){.v6-learning-banner{align-items:flex-start;flex-direction:column;padding:18px}.v6-learning-banner .button{width:100%;justify-content:center}.test-actions{grid-template-columns:1fr!important}.v6-traffic-chip{top:10px;left:10px;font-size:9px;max-width:calc(100% - 135px)}.v6-cite{max-width:100%}.hero{border-radius:18px!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.001ms!important;animation-duration:.001ms!important;scroll-behavior:auto!important}}
